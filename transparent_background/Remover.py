@@ -134,7 +134,7 @@ class Remover:
         elif type == 'blur':
             img = img * pred[..., np.newaxis] + cv2.GaussianBlur(img, (0, 0), 15) * (1 - pred[..., np.newaxis])
         elif type == 'white':
-            bg = np.stack([np.ones_like(pred)] * 3, axis=-1) * [0, 0, 0]
+            bg = np.stack([np.ones_like(pred)] * 3, axis=-1) * [255, 255, 255]
             img = img * pred[..., np.newaxis] + bg * (1 - pred[..., np.newaxis])
         elif type == 'overlay':
             bg = (np.stack([np.ones_like(pred)] * 3, axis=-1) * [120, 255, 155] + img) // 2
