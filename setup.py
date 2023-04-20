@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="transparent-background",
+    name="transparent-background-white-bg",
     version="1.2.3",
     author="Taehun Kim",
     author_email="taehoon1018@postech.ac.kr",
